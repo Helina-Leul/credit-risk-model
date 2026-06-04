@@ -4,6 +4,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.cluster import KMeans
 
 # -----------------------------
 # Load Data
@@ -127,11 +128,12 @@ processed_df.to_csv(
 
 print("Processed Shape:", processed_df.shape)
 print("Processed data saved successfully!")
+
+
 # ==========================================
 # TASK 4 - PROXY TARGET VARIABLE ENGINEERING
 # ==========================================
 
-from sklearn.cluster import KMeans
 
 # -----------------------------
 # Create RFM Features
